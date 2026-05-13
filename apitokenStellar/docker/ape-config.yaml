@@ -1,0 +1,35 @@
+default_ecosystem: polygon
+
+dependencies:
+  - name: OpenZeppelin
+    github: OpenZeppelin/openzeppelin-contracts
+    version: 5.0.2
+
+plugins:
+  - name: solidity # ape-solidity plugin
+    version: 0.7.2
+  - name: ens
+  - name: polygon
+  - name: foundry
+  - name: infura
+  - name: etherscan
+
+solidity:
+  version: 0.8.25
+  import_remapping:
+    - "@openzeppelin=OpenZeppelin/5.0.2"
+
+compile:
+  include_dependencies: true
+
+ethereum:
+  default_network: mainnet-fork
+  mainnet_fork:
+    gas_limit: max
+
+test:
+  mnemonic: test test test test test test test test test test test junk
+  number_of_accounts: 10
+
+foundry:
+   host: auto

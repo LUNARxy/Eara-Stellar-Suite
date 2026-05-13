@@ -1,0 +1,11 @@
+services:
+  app:
+    container_name: api_token_prod
+    image: ghcr.io/ivanrumo/api_token_prod:latest
+    ports:
+      - "8801:8000"
+    environment:
+      - ENVIRONMENT=prod
+    restart: always
+    volumes:
+      - ../config.py:/app/config.py

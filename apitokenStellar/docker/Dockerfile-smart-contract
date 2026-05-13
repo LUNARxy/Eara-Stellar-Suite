@@ -1,0 +1,18 @@
+FROM python:3.9
+
+WORKDIR /usr/src/app
+
+RUN pip install eth-ape
+
+COPY ape-config.yaml .
+
+RUN ape plugins install .
+
+
+# COPY . .
+VOLUME /usr/src/app
+
+#ENTRYPOINT ["sh"]
+
+CMD [ "scripts/deploy_Test1_development.sh" ]
+

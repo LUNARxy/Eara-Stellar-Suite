@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html id="html" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="/earastellar/favicon.ico">
+    <title>Eara Stellar App</title>
+
+
+      <meta name="description" content="Eara Stellar App">
+      <meta property="og:description" content="Eara Stellar App">
+      <meta property="og:title" content="Eara Stellar App" />
+      <meta property="og:image" content="<%= VUE_APP_WHITE_LABEL_URL %>earastellar/share.jpg" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="<%= VUE_APP_WHITE_LABEL_URL %>" />
+      <link rel="canonical" href="<%= VUE_APP_WHITE_LABEL_URL %>">
+
+
+
+      <link rel="manifest" href="/earastellar/manifest.json">
+      <script>
+          if ("serviceWorker" in navigator) {
+              navigator.serviceWorker.register("sw.js").then(function(reg) {
+                  //console.log("register", reg);
+              }).catch(function(err) {
+                  //console.log("err", err);
+              });
+          }
+      </script>
+      <script>
+          window.addEventListener('beforeinstallprompt', function(e) {
+              // beforeinstallprompt Event fired
+              // e.userChoice will return a Promise.
+              e.userChoice.then(function(choiceResult) {
+
+              });
+          });
+      </script>
+      <script>
+          //fetch()
+      </script>
+
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <!--<div class="background-container">
+        <div class="stars"></div>
+        <div class='stars_move'></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
+    </div>-->
+    <div style="position: relative;">
+        <div id="app"></div>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
