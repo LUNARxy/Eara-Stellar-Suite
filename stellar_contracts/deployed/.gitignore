@@ -1,0 +1,4 @@
+# Ignore auto-generated deployment state files.
+# These contain contract IDs and wasm hashes — commit them if you want to
+# track deployments in version control, or add them here to keep them local.
+*.env

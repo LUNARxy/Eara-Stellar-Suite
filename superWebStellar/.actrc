@@ -1,0 +1,4 @@
+-s GITHUB_TOKEN
+--secret-file .env
+
+
