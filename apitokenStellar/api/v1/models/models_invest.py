@@ -64,8 +64,6 @@ class Invest(Base):
     pooled_wallet_key = Column(String(200), nullable=True)
     blockchain_network = Column(String(50), nullable=True)
 
-    show_on_pentaken = Column(Boolean, nullable=False, default=False, index=True)
-
     token_type = Column(String(length=20), nullable=False, server_default='stellar')
 
     total_amount_invested_completed = Column(Float, nullable=True, comment="Para proyectos completados sin fases")
