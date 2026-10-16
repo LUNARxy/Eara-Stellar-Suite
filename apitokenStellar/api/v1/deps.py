@@ -1,7 +1,8 @@
+from config import JWT_SECRET_KEY
 from api.v1.database import SessionLocal
 from fastapi.security import OAuth2PasswordBearer
 
-SECRET_KEY = "***SECRETO_ELIMINADO_PURGA_GIT_2026-10-16***"
+SECRET_KEY = JWT_SECRET_KEY
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 REFRESH_TOKEN_EXPIRE_MINUTES = 180
